@@ -1,5 +1,5 @@
 /* import google font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 /* ADD this for when we add padding the elements/content are not pushed off the page */
 html {
@@ -25,11 +25,10 @@ justify-content: center;
 .quote-container {
     width: auto;
     max-width: 900px;
-    padding: 20px 10px;
+    padding: 20px 30px;
     border-radius: 10px;
-    background-color: rgba(255, 255,255, .4);
+    background-color: rgba(255, 255, 255, 0.4);
     box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
-    ;
 }
 
 .quote-text {
@@ -54,12 +53,12 @@ justify-content: center;
 /* we always place media queries on the bottom of the page
 here we are saying that if the width of the screen is less than 1000px (phone/tablet) 
 then we will make these changes */
-@media screen and (max-width: 100px) {
+@media screen and (max-width: 1000px) {
     .quote-container {
-        margin: auto 10px;
+      margin: auto 10px;
     }
-
-    .quote-text{
-        font-size: 2.5rem;
+  
+    .quote-text {
+      font-size: 2.5rem;
     }
-}
+  }
