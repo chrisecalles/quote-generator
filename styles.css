@@ -86,6 +86,22 @@ button:active {
   font-size: 1.5rem;
 }
 
+
+/* loader */
+.loader {
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid #333;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
 /* we always place media queries on the bottom of the page
 here we are saying that if the width of the screen is less than 1000px (phone/tablet) 
 then we will make these changes */
