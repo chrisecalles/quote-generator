@@ -8,23 +8,22 @@ const loader = document.getElementById("loader");
 // global variable
 let apiQuotes = [];
 
-// Show loading
 // hidding hides are div, set to false so we don't want it to be hidden\
 // when loader is going quotecontainer is hidden
-function loading() {
+function showLoadingSpinner(){
   loader.hidden = false;
   quoteContainer.hidden = true;
 }
 
 // hide loading
-function complete() {
+function removeLoadingSpinner() {
   quoteContainer.hidden = false;
   loader.hidden = true;
 }
 
 //show new quotes
 function newQuote() {
-  loading();
+  showLoadingSpinner();
   // pick a random quote from apiquotes
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
 
@@ -44,12 +43,12 @@ function newQuote() {
 
   // Set quote and hide loader 
   quoteText.textContent = quote.text;
-  complete();
+  removeLoadingSpinner();
 }
 
 // Get quotes from API
 async function getQuotes() {
-  loading();
+  showLoadingSpinner();
   const apiUrl = "https://type.fit/api/quotes";
   try {
     //response works only when data is being set
